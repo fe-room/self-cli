@@ -4,7 +4,7 @@ const { Command } = require("commander"); // Commander.js node.js命令行界面
 const program = new Command();
 const { green } = require("../utils/chalk"); //修改命令行字体颜色
 const inquirerMachine = require("../utils/inquirer")  //交互模块
-const create = require('../src/create')
+const create = require('../src/initTemplate')
 program.version("1.0.0");
 program
     .command("create")
