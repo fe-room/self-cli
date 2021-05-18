@@ -6,10 +6,11 @@ module.exports = function mergePackageJson(config,sourcePath){
       if(err) throw err
       const { author , name  } = config
       let json = data.toString()
+      console.log(json)
       // /* 替换模版 */
       json = json.replace(/demoName/g,name.trim())
       json = json.replace(/demoAuthor/g,author.trim())
-      const path = process.cwd()+ '/package.json'
+      const path = sourcePath+ '/package.json'
       // /* 写入文件 */
       fs.writeFile(path, new Buffer.from(json) ,()=>{
         resolve()

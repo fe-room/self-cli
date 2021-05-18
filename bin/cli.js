@@ -10,7 +10,7 @@ program
     .command("create")
     .description('create a project')
     .action(() => {
-        green('🎉🎉🎉欢迎使用klzz-react-cli,轻松构建react ts项目🎉🎉🎉')
+        green('🎉🎉🎉欢迎使用klzz-cli,轻松构建react-ts、vue-ts项目🎉🎉🎉')
         inquirerMachine().then((config) => {
             create(config)
         })
